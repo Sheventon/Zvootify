@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/photos.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/show_new_photo.js"></script>
+</head>
+<body>
+<header>
+    <div class="logotype">LOGO<span class="red"></span></div>
+    <nav>
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="">Account</a></li>
+            <li><a class="menu__item" href="">My Songs</a></li>
+            <li><a class="menu__item" href="">My Friends</a></li>
+            <li><a class="menu__item" href="">Find Friend</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="main">
+    <div class="head">
+        <h1>Choose photos</h1>
+    </div>
+    <div class="content">
+        <form id="form1" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back1.jpg" alt="Your image there">
+        </form>
+        <form id="form2" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back2.jpg" alt="Your image there">
+        </form>
+        <form id="form3" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back3.jpg" alt="Your image there">
+        </form>
+        <form id="form4" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back4.jpg" alt="Your image there">
+        </form>
+        <form id="form5" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back5.jpg" alt="Your image there">
+        </form>
+        <form id="form6" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back6.jpg" alt="Your image there">
+        </form>
+        <form id="form7" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back7.jpg" alt="Your image there">
+        </form>
+        <form id="form8" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back8.jpg" alt="Your image there">
+        </form>
+        <form id="form9" class="item" method="post" action="/profile" enctype="multipart/form-data">
+            <input class="current" type="image" src="../img/profile_back/profile_back9.jpg" alt="Your image there">
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <!--<form id="form" method="post" action="/profile" enctype="multipart/form-data">
+            <label  class="image_uploads" for="image_uploads">Choose images to upload (PNG, JPG)</label>
+            <input class="add" id="image_uploads" type="file" accept="image/jpeg, image/jpg, image/png" onchange="loadFile(event)">
+            <img id="preview" src="" alt="sd">
+            <br>
+            <input type="submit" class="button" value="CHOOSE">
+        </form>-->
+        <form class="form" method="post" action="/account" enctype="multipart/form-data">
+            <div>
+                <label class="label" for="image_uploads">Choose images to upload (PNG, JPG)</label>
+                <br>
+                <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+            </div>
+            <div class="preview">
+                <p>No files currently selected for upload</p>
+            </div>
+            <div>
+                <input type="button" class="button" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const input = document.querySelector('#image_uploads');
+    const preview = document.querySelector('.preview');
+
+    input.style.opacity = 0;
+
+    input.addEventListener('change', updateImageDisplay);
+
+    function updateImageDisplay() {
+        while (preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+
+        const curFiles = input.files;
+        if (curFiles.length === 0) {
+            const para = document.createElement('p');
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);
+        } else {
+            const list = document.createElement('ol');
+            preview.appendChild(list);
+
+            for (const file of curFiles) {
+                const listItem = document.createElement('li');
+                const para = document.createElement('p');
+
+                if (validFileType(file)) {
+                    para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
+                    const image = document.createElement('img');
+                    image.src = URL.createObjectURL(file);
+
+                    listItem.appendChild(image);
+                    listItem.appendChild(para);
+                } else {
+                    para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+                    listItem.appendChild(para);
+                }
+
+                list.appendChild(listItem);
+            }
+        }
+    }
+
+    const fileTypes = [
+        'image/apng',
+        'image/bmp',
+        'image/gif',
+        'image/jpeg',
+        'image/pjpeg',
+        'image/png',
+        'image/svg+xml',
+        'image/tiff',
+        'image/webp',
+        `image/x-icon`
+    ];
+
+    function validFileType(file) {
+        return fileTypes.includes(file.type);
+    }
+
+    function returnFileSize(number) {
+        if (number < 1024) {
+            return number + 'bytes';
+        } else if (number > 1024 && number < 1048576) {
+            return (number / 1024).toFixed(1) + 'KB';
+        } else if (number > 1048576) {
+            return (number / 1048576).toFixed(1) + 'MB';
+        }
+    }
+</script>
+</body>
+</html>

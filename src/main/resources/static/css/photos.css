@@ -1,0 +1,284 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "SF Pro Display", sans-serif;
+    color: #fff;
+    background: #1d2124;
+}
+
+.main {
+    padding-top: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    min-width: 350px;
+    border-bottom: 4px #FFFFFF solid;
+}
+
+.head {
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.current {
+    height: 200px;
+    width: 350px;
+}
+
+h1 {
+    border-bottom: 8px #ffffff dotted;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px;
+    position: relative;
+}
+
+.photo {
+    height: 200px;
+    width: 350px;
+}
+
+.item {
+    height: 200px;
+    width: 350px;
+}
+
+input {
+    transition: all 0.35s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input:hover {
+    transition: all .2s ease-out;
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+    cursor: pointer;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.photo-1 {
+    content: url("../img/profile_back/profile_back1.jpg");
+}
+
+.photo-2 {
+    content: url("../img/profile_back/profile_back2.jpg");
+}
+
+.photo-3 {
+    content: url("../img/profile_back/profile_back3.jpg");
+}
+
+.photo-4 {
+    content: url("../img/profile_back/profile_back4.jpg");
+}
+
+.photo-5 {
+    content: url("../img/profile_back/profile_back5.jpg");
+}
+
+.photo-6 {
+    content: url("../img/profile_back/profile_back6.jpg");
+}
+
+.photo-7 {
+    content: url("../img/profile_back/profile_back7.jpg");
+}
+
+.photo-8 {
+    content: url("../img/profile_back/profile_back8.jpg");
+}
+
+.photo-9 {
+    content: url("../img/profile_back/profile_back9.jpg");
+}
+
+.wrapper {
+    justify-content: center;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+}
+
+.change-photo {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*.image_uploads {
+    position: relative;
+    font-size: 20px;
+}
+
+.image_uploads:after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 90px;
+    background: url("../img/plus.png") no-repeat center;
+    background-size: cover;
+    top: 25px;
+    left: 37%;
+}
+
+.image_uploads:enabled {
+    display: none;
+}
+
+#preview {
+    height: 200px;
+    width: 350px;
+    background: #1d2124;
+    background-size: cover;
+}
+
+.add {
+    display: none;
+}
+
+
+#form {
+    margin-bottom: 50px;
+    width: 350px;
+    position: center;
+    display: inline-block;
+}
+
+.button {
+    text-transform: uppercase;
+    outline: 0;
+    background-color: rgba(0, 0, 0, .8);
+    width: 250px;
+    font-size: 20px;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+form {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.form {
+    padding-bottom: 40px;
+}
+
+form ol {
+    padding-left: 0;
+}
+
+form li, div > p {
+    background: #f06c64;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    list-style-type: none;
+    border: 1px solid black;
+}
+
+form img {
+    height: 64px;
+    order: 1;
+}
+
+.preview {
+    font-size: 14px;
+}
+
+form p {
+    line-height: 32px;
+    padding-left: 10px;
+}
+
+#image_uploads {
+    height: 0;
+    opacity: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+form label, form .button {
+    background-color: #f06c64;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px ridge black;
+    font-size: 20px;
+    height: auto;
+    color: #FFFFFF;
+}
+
+form label:active, form .button:active {
+    background-color: #853329;
+    color: white;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .preview {
+        font-size: 11px;
+    }
+
+    form label, form .button {
+        background-color: #f06c64;
+        padding: 2px 5px;
+        border-radius: 2px;
+        border: 1px ridge black;
+        font-size: 15px;
+        height: auto;
+    }
+
+    .wrapper {
+        min-width: 350px;
+        width: 96%;
+        left: 2%;
+    }
+}

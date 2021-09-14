@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Playlist</title>
+    <link rel="stylesheet" href="../css/add_playlist.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="shortcut icon" href="../img/music-folder.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="form">
+<form action="/add-playlist" method="post">
+    <div class="name">
+        <p class="playlist-name">Название плейлиста</p>
+        <input type="text" name="playlist-name" class="playlist-name-input">
+    </div>
+    <div class="private">
+        <p>Приватный</p>
+        <input class="tgl tgl-flat" id="checkbox" type="checkbox"/>
+        <label class="tgl-btn" for="checkbox"></label>
+    </div>
+    <div class="buttons">
+            <input type="submit" name="submit" value="Создать" class="submit-btn">
+            <input type="button" name="hide" value="Закрыть" class="hide-btn">
+    </div>
+    <!--<div class="songs">
+        <p>Добавить песни</p>
+        <ul class="all-songs">
+            <li>
+                <div class="song">
+                    <div class="song-cover"></div>
+                    <div class="song-descr">
+                        <p class="song-name">Гостиница Космос</p>
+                        <p class="singer">Mnogoznaal</p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>-->
+</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script rel="script" src="../js/add_playlist.js"></script>
+<script rel="script" src="../js/header.js"></script>
+</body>
+</html>

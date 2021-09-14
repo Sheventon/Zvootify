@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
+
+:root {
+    --app-container: #f3f6fd;
+    --main-color: #1f1c2e;
+    --content-color: #ffffff;
+}
+
+.dark:root {
+    --app-container: #111827;
+    --main-color: #fff;
+    --content-color: #1f1c2e;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*font-family: "Comfrtaa", sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    display: flex;
+    /*justify-content: center;*/
+    background-color: var(--app-container);
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--app-container);
+    transition: 0.2s;
+    max-width: 1800px;
+}
+
+.main {
+    margin: 30px 25%;
+    width: 1000px;
+}
+
+.album-name {
+    font-size: 25px;
+}
+
+.singer-name {
+    font-size: 20px;
+}
+
+.money {
+    display: flex;
+    flex-direction: row;
+}
+.money > p, .songs-count {
+    font-size: 15px;
+}
+
+.songs-count {
+    margin-top: 45px;
+}
+
+.peso {
+    content: url("../img/peso.png");
+    width: 15px;
+    height: 15px;
+}
+
+.top-head {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.main-head {
+    margin-left: 50px;
+    width: 100%;
+}
+
+.sub-head {
+    display: flex;
+    flex-direction: row;
+}
+
+.album-form {
+    margin-top: 45px;
+    margin-left: 79.5%;
+}
+
+.songs-head {
+    font-size: 30px;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

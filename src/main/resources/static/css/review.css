@@ -1,0 +1,357 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-wrapper, .search-form {
+    position: absolute;
+    right: 10px;
+    border-radius: 20px;
+    background-color: var(--search-area-bg);
+    padding-right: 12px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    color: var(--light-font);
+    box-shadow: 0 2px 6px 0 rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    overflow: hidden;
+}
+
+.search-form {
+    right: 0;
+}
+
+.dark .search-wrapper {
+    box-shadow: none;
+}
+
+.search-input {
+    border: none;
+    flex: 1;
+    outline: none;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    background-color: var(--search-area-bg);
+    color: var(--main-color);
+}
+.search-input:placeholder {
+    color: var(--main-color);
+    opacity: 0.6;
+}
+
+.search-btn {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+
+:root {
+    --app-container: #f3f6fd;
+    --main-color: #1f1c2e;
+    --content-color: #ffffff;
+}
+
+.dark:root {
+    --app-container: #111827;
+    --main-color: #fff;
+    --content-color: #1f1c2e;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: "Comfrtaa", sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: var(--app-container);
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--app-container);
+    transition: 0.2s;
+    max-width: 1800px;
+}
+
+.top-head {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    position: absolute;
+    right: 4%;
+    top: 4px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-term {
+    height: 30px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.search-button {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.search-label {
+    height: 30px;
+    width: 30px;
+    content: url("../img/search.svg");
+}
+
+.content {
+    height: 100%;
+    margin: 10px 10px 10px;
+    border-radius: 32px;
+    background-color: var(--content-color);
+}
+
+p {
+    font-size: 20px;
+}
+
+.link-to-songs {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: var(--main-color);
+}
+
+.arrow {
+    content: url("../img/arrow.png");
+    width: 15px;
+    height: 20px;
+    margin-bottom: 0;
+    margin-top: 23px;
+}
+
+.head {
+    font-weight: 700;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.money {
+    display: flex;
+    flex-direction: row;
+}
+
+.balance {
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.peso, .peso-count {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.peso {
+    content: url("../img/peso.png");
+    width: 22px;
+    height: 22px;
+}
+
+.main-head, .main-head-playlists {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.main-head-playlists {
+    margin-left: 15px;
+}
+
+.music {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.albums {
+    padding-left: 50px;
+    height: 530px;
+    overflow-y: auto;
+}
+
+.singers-albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.album {
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    /*width: 100%;*/
+    max-width: 250px;
+    height: 250px;
+}
+
+.album-content {
+    align-items: center;
+    color: var(--app-container);
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    -webkit-transition: 0.3s;
+}
+
+.album-content:hover {
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: 0.43s;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px -3px 11px 10px rgba(0, 0, 0, 0.8) inset;
+    -webkit-box-shadow: 1px -3px 11px 10px rgba(0, 0, 0, 0.8) inset;
+    -moz-box-shadow: 1px -3px 11px 10px rgba(0, 0, 0, 0.8) inset;
+}
+
+.album-name {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.album-singer {
+    font-size: 15px;
+    margin-bottom: 150px;
+}
+
+.album-year, .songs-count {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+.playlists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.songs {
+    height: 530px;
+    /*background: #4A4A4A;*/
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+@media (max-width: 1200px) {
+    .songs {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .singers-albums, .playlists {
+        grid-template-columns: 1.3fr 1.3fr;
+    }
+
+    .songs {
+        transform: translateX(100%);
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1030px) {
+    .albums {
+        padding-left: 0;
+    }
+
+    .top-info, .topic {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .songs {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    .album {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .singers-albums {
+        grid-template-columns: 1.1fr 1.1fr;
+    }
+}
+
+/*.playlists {
+    background: dimgray;
+    margin-left: 80px;
+    margin-right: 100px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+}*/

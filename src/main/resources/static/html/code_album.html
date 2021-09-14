@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/code_album.css">
+    <title>Album</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header-body">
+            <div class="header-burger">
+                <span></span>
+            </div>
+            <nav class="header-menu">
+                <ul class="header-list">
+                    <li><a href="/account" class="header-link">Моя страница</a></li>
+                    <li><a href="/review" class="header-link">Обзор</a></li>
+                    <li><a href="/favorite" class="header-link">Избранное</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="background" style="background: url('../img/songs_cover/krug_vetrov.jpg') center; background-size: cover;"></div>
+<section>
+    <div class="album-info">
+        <div class="album-art">
+            <!--<img src="https://target.scene7.com/is/image/Target/51223401?wid=520&hei=520&fmt=pjpeg"/>-->
+            <div class="actions">
+                <div class="play" onclick="">
+                    Добавить
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                </div>
+                <!--<form action="/buy/${singer}/${name}" method="post">
+                    <input type="submit" class="play" value="Добавить">
+                </form>-->
+                <!--<div class="money">
+                    <p class="head peso-count">10</p>
+                    <p class="head peso"></p>
+                </div>-->
+            </div>
+        </div>
+        <div class="album-details">
+            <h2>Mnogoznaal fdnfsjd wfsdgsg</h2>
+            <h2 class="album-name">Гостиница Космос</h2>
+            <h5>2016</h5>
+        </div>
+    </div>
+    <div class="album-tracks">
+        <ol>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="player__song-time"></span>
+                    <span class="plus"><input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+            <li>
+                <span>Feel Invincible</span>
+                <div class="money-song">
+                    <p class="peso-count-song">1</p>
+                    <p class="peso-song"></p>
+                    <span class="time">3:49</span>
+                    <span class="plus"></span>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/player.js"></script>
+</body>
+</html>
